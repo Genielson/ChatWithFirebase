@@ -21,10 +21,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        email = findViewById(R.id.editEmail);
-        password = findViewById(R.id.editPassword);
-        buttonLogin = findViewById(R.id.buttonLogin);
-        createAccount = findViewById(R.id.textSignUp);
+        email = findViewById(R.id.edit_login_email);
+        password = findViewById(R.id.edit_login_password);
+        buttonLogin = findViewById(R.id.bt_login);
+        createAccount = findViewById(R.id.txtSignup);
 
         createAccount.setOnClickListener(new View.OnClickListener(){
 
@@ -44,6 +44,15 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
     }
+
+    private void openMainScreen(){
+        Intent intent = new Intent(LoginActivity.this,MainHomeActivity.class);
+        startActivity(intent);
+    }
+
+
+
+
+
 }
