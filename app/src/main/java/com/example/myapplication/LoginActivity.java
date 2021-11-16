@@ -30,8 +30,8 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(LoginActivity.this,SignupActivity.class);
-                //startActivity(intent);
+                Intent intent = new Intent(LoginActivity.this,SignupActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -39,9 +39,10 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                startActivity(intent);
+                openMainScreen();
+                finish();
             }
+
         });
 
     }
@@ -50,9 +51,5 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(LoginActivity.this,MainHomeActivity.class);
         startActivity(intent);
     }
-
-
-
-
 
 }
