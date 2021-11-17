@@ -42,7 +42,6 @@ public class LoginActivity extends AppCompatActivity {
                 openMainScreen();
                 finish();
             }
-
         });
 
     }
