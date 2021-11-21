@@ -9,13 +9,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class LoginActivity extends AppCompatActivity {
 
     private EditText email;
     private EditText password;
     private Button buttonLogin;
     private TextView createAccount;
-
+    private FirebaseAuth firebase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +41,10 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                openMainScreen();
-                finish();
+
+                
+                //openMainScreen();
+                //finish();
             }
         });
 
