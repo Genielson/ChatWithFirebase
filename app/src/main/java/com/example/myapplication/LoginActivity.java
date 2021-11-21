@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplication.config.FirebaseConfig;
+import com.example.myapplication.helper.Preferences;
 import com.example.myapplication.models.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -59,8 +60,11 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
 
-
-
+                            Preferences pref = new Preferences(LoginActivity.this);
+                            pref.saveData(user.getEmail(),user.getName());
+                            openMainScreen();
+                            finish();
+                            
                         }else{
                             Toast.makeText(getApplicationContext(),
                                     "Erro ao realizar login!",

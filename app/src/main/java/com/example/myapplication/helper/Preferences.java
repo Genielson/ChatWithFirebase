@@ -22,7 +22,7 @@ public class Preferences {
     public void saveData(String identificador,String nome){
 
         editor.putString("ideUserLog0101",identificador);
-        editor.putString("nomeUsuLog01010",nome);
+        editor.putString("nameUsuLog01010",nome);
         editor.commit();
 
     }
@@ -32,7 +32,7 @@ public class Preferences {
     }
 
     public String getName(){
-        return preferences.getString("nomeUsuLog01010",null);
+        return preferences.getString("nameUsuLog01010",null);
     }
-    
+
 }
