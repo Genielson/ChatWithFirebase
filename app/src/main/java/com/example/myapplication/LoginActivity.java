@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,7 +9,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.myapplication.config.FirebaseConfig;
+import com.example.myapplication.models.User;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
@@ -18,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button buttonLogin;
     private TextView createAccount;
     private FirebaseAuth firebase;
+    private User user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +49,26 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                firebase = FirebaseConfig.getFirebaseAuthInstance();
+                user = new User();
+                user.setEmail(email.getText().toString());
+                user.setPassword(password.getText().toString());
+                firebase.signInWithEmailAndPassword(user.getEmail(),user.getPassword()).
+                        addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
 
-                
+
+
+                        }else{
+                            Toast.makeText(getApplicationContext(),
+                                    "Erro ao realizar login!",
+                                    Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+
                 //openMainScreen();
                 //finish();
             }
