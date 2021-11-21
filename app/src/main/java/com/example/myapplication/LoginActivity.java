@@ -64,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
                             pref.saveData(user.getEmail(),user.getName());
                             openMainScreen();
                             finish();
-                            
+
                         }else{
                             Toast.makeText(getApplicationContext(),
                                     "Erro ao realizar login!",
