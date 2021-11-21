@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "957060449044",
+    "project_id": "clonechat-a5d71",
+    "storage_bucket": "clonechat-a5d71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957060449044:android:8f5e13273855f050083801",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957060449044-3ll5kibl895dkpdc03g94fpku0uit3dm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "d2ea1bf9e9eccfd52fb507359491a42a10514242"
+          }
+        },
+        {
+          "client_id": "957060449044-pc96up0jjrd1gugt5t22bk8f4qd4real.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD04Nh771ILzF5wVChbSRDMh13zShScsHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957060449044-pc96up0jjrd1gugt5t22bk8f4qd4real.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
