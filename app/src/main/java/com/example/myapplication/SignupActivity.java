@@ -68,13 +68,11 @@ public class SignupActivity extends AppCompatActivity {
                                         Preferences pref = new Preferences(SignupActivity.this);
                                         pref.saveData(user.getEmail(),user.getName());
                                         openScreenLogin();
-
                                     }else{
 
                                         Toast.makeText(getApplicationContext(),
                                                 "Houve um erro ao cadastrar. Tente colocar numeros na senha! ",
                                                 Toast.LENGTH_LONG).show();
-
                                     }
                                 }
                             });
